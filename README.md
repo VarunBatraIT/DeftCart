@@ -32,7 +32,7 @@ OK (3 tests, 7 assertions)
 It has very simple API, sample codes are in test. Following is a sample 
 
 ```PHP
-        $productCart = new Cart($this->storage, 'Product');
+        $productCart = new Cart(new FileStorage(), 'Product');
         $productCart->add(1, 2);
       
         //Setting cart type to Membership
