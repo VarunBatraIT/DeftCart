@@ -40,11 +40,12 @@ It has very simple API, sample codes are in test. Following is a sample
 
         //Previous cart as whole new object but ideally you shouldn't do that since cart is only loaded once. 
         $membershipCart = new Cart($this->storage, 'Membership');
-        
         $productCart->set(1,3); //Sets quanity of id 1 as 3
         $productCart->add(1,3); //Sets quanity of id 1 as 6 (3+3)
+        $productCart->minus(1,2); //Now quanity of id is 4
         $productCart->delete(1); //Delete id 1
         $productCart->deleteAll(); //Delete all items of this cart
+        $productCart->removeAllCart(); //Removes all cart not only product cart. Useful to remove junk data. Usually storage should have reset function however I didn't feel like putting that inside interface. Not everyone uses it
         
         
 
