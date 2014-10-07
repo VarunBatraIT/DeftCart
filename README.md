@@ -43,6 +43,7 @@ It has very simple API, sample codes are in test. Following is a sample
         
         $productCart->set(1,3); //Sets quanity of id 1 as 3
         $productCart->add(1,3); //Sets quanity of id 1 as 6 (3+3)
+        $productCart->minus(1,2); //Now quanity of id is 4
         $productCart->delete(1); //Delete id 1
         $productCart->deleteAll(); //Delete all items of this cart
         
