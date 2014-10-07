@@ -105,7 +105,7 @@ class Cart
     /**
      * Delete all types of cart
      */
-    public function resetAllCart()
+    public function removeAllCart()
     {
         $this->storage->set(array());
     }
