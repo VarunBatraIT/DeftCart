@@ -4,10 +4,10 @@
  * User: codevarun
  */
 
-require '../Cart/Cart.php';
-require '../Storage/StorageInterface.php';
-require '../Storage/Session/SessionStorage.php';
-require '../Storage/File/FileStorage.php';
+require __DIR__.'/../Cart/Cart.php';
+require __DIR__.'/../Storage/StorageInterface.php';
+require __DIR__.'/../Storage/Session/SessionStorage.php';
+require __DIR__.'/../Storage/File/FileStorage.php';
 
 use \Deft\Cart\Cart;
 use \Deft\Cart\StorageInterface;
