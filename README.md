@@ -2,7 +2,7 @@ DeftCart
 ========
 Cart class designed to use for multiple carts at same time. You can define your own storage, for sample see FileStorage and SessionStorage. It must implement Storage class
 
-<h2>Multi Cart for PHP</h2>
+<h2>Multi Cart Library for PHP</h2>
 
 Deadly simple cart that can be used for multiple carts at same time. Only quantity is supported since I only need quantities for now.
 
