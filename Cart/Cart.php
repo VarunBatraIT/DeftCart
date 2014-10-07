@@ -54,6 +54,20 @@ class Cart
     }
 
     /**
+     * Minus item to cart
+     * @param $uid
+     * @param int $quantity
+     */
+    public function minus($uid, $quantity = 1)
+    {
+        $currentQuantity = $this->get($uid);
+        if ($currentQuantity > 0) {
+            $currentQuantity = $currentQuantity - $quantity;
+        }
+        $this->items[$uid] = $currentQuantity;
+    }
+
+    /**
      * Sets quantity of cart
      * @param $uid
      * @param int $quantity
