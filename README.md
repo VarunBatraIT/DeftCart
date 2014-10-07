@@ -1,8 +1,12 @@
 DeftCart
 ========
+Cart class designed to use for multiple carts at same time. You can define your own storage, for sample see FileStorage and SessionStorage. It must implement Storage class
+
+<h2>Multi Cart for PHP</h2>
 
 Deadly simple cart that can be used for multiple carts at same time. Only quantity is supported since I only need quantities for now.
-Testing on PHP 5.4 
+
+Tested on PHP 5.4 
 
 
 
@@ -45,7 +49,7 @@ It has very simple API, sample codes are in test. Following is a sample
         $productCart->minus(1,2); //Now quanity of id is 4
         $productCart->delete(1); //Delete id 1
         $productCart->deleteAll(); //Delete all items of this cart
-        $productCart->removeAllCart(); //Removes all cart not only product cart. Useful to remove junk data. Usually storage should have reset function however I didn't feel like putting that inside interface. Not everyone uses it
+        $productCart->removeAllCarts(); //Removes all cart not only product cart. Useful to remove junk data. Usually storage should have reset function however I didn't feel like putting that inside interface. Not everyone uses it
         
         
 
