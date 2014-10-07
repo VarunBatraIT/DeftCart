@@ -3,10 +3,9 @@
  * User: codevarun
  */
 
-namespace Deft;
+namespace Deft\Storage;
 
-
-interface Storage
+interface StorageInterface
 {
 
     /**

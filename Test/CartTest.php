@@ -4,15 +4,17 @@
  * User: codevarun
  */
 
-require 'Cart.php';
-require 'Storage.php';
-require 'SessionStorage.php';
-require 'FileStorage.php';
-use Deft\Cart;
-use Deft\FileStorage;
-use Deft\Storage;
+require '../Cart/Cart.php';
+require '../Storage/StorageInterface.php';
+require '../Storage/Session/SessionStorage.php';
+require '../Storage/File/FileStorage.php';
 
-class CartTest extends PHPUnit_Framework_TestCase
+use \Deft\Cart\Cart;
+use \Deft\Cart\StorageInterface;
+use \Deft\Storage\File\FileStorage;
+use \Deft\Storage\Session\SessionStorage;
+
+class CartTest extends \PHPUnit_Framework_TestCase
 {
     private $storage;
 

@@ -3,8 +3,9 @@
  * User: codevarun
  */
 
-namespace Deft;
+namespace Deft\Cart;
 
+use Deft\Storage\StorageInterface;
 
 class Cart
 {
@@ -22,7 +23,7 @@ class Cart
      * @param Storage $storage
      * @param bool $type
      */
-    public function  __construct(Storage $storage, $type = false)
+    public function  __construct(StorageInterface $storage, $type = false)
     {
         $this->storage = $storage;
         $this->initializeType($type, false);

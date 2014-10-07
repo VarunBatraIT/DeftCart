@@ -4,10 +4,11 @@
  * User: codevarun
  */
 
-namespace Deft;
+namespace Deft\Storage\Session;
 
+use Deft\Storage\StorageInterface;
 
-class SessionStorage implements Storage
+class SessionStorage implements StorageInterface
 {
 
     public function get()

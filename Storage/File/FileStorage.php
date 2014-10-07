@@ -4,10 +4,12 @@
  * User: codevarun
  */
 
-namespace Deft;
+namespace Deft\Storage\File;
+
+use Deft\Storage\StorageInterface;
 
 
-class FileStorage implements Storage
+class FileStorage implements StorageInterface
 {
     //In practical just file name must depend on session id or at least unique per visitors
     private $fileName = 'cart.json';
