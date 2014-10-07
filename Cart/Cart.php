@@ -64,6 +64,9 @@ class Cart
         if ($currentQuantity > 0) {
             $currentQuantity = $currentQuantity - $quantity;
         }
+        if ($currentQuantity < 1) {
+            $this->remove($uid);
+        }
         $this->items[$uid] = $currentQuantity;
     }
 
