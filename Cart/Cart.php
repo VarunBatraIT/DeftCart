@@ -30,6 +30,13 @@ class Cart
 
     }
 
+    /**
+     * @return array All cart items
+     */
+    public function getAll()
+    {
+        return $this->items;
+    }
 
     /**
      * @param $uid
@@ -42,6 +49,7 @@ class Cart
         }
         return 0;
     }
+
 
     /**
      * Add item to cart
