@@ -10,7 +10,7 @@ require __DIR__ . '/../../Storage/Session/SessionStorage.php';
 require __DIR__ . '/../../Storage/File/FileStorage.php';
 
 use \Deft\Cart\Cart;
-use \Deft\Cart\StorageInterface;
+use \Deft\Storage\StorageInterface;
 use \Deft\Storage\File\FileStorage;
 use \Deft\Storage\Session\SessionStorage;
 
