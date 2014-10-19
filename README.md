@@ -13,7 +13,7 @@ Tested on PHP 5.4
 To run test
 
 ```
-phpunit UniteTest Test/CartTest.php
+phpunit UniteTest Cart/Test/CartTest.php
 ```
 
 Sample output
@@ -32,7 +32,7 @@ OK (3 tests, 7 assertions)
 It has very simple API, sample codes are in test. Following is a sample 
 
 ```PHP
-        $productCart = new Cart(new FileStorage(), 'Product');
+        $productCart = Cart::getInstance(new FileStorage(), 'Product');
         $productCart->add(1, 2);
       
         //Setting cart type to Membership
@@ -42,8 +42,8 @@ It has very simple API, sample codes are in test. Following is a sample
         //Setting back to Product
         $productCart->setType('Product');
 
-        //Previous cart as whole new object but ideally you shouldn't do that since cart is only loaded once. 
-        $membershipCart = new Cart($this->storage, 'Membership');
+        //getting a membership cart.
+        $membershipCart = Cart::getInstance($this->storage, 'Membership');
         $productCart->set(1,3); //Sets quanity of id 1 as 3
         $productCart->add(1,3); //Sets quanity of id 1 as 6 (3+3)
         $productCart->minus(1,2); //Now quanity of id is 4

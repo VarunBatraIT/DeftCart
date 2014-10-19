@@ -22,13 +22,27 @@ class Cart
      * Initialize type of cart we are dealing with
      * @param Storage $storage
      * @param bool $type
+     * Protected constructor to prevent creating a new instance of the
+     * *Singleton* via the `new` operator from outside of this class.
      */
-    public function  __construct(StorageInterface $storage, $type = false)
+    protected function  __construct(StorageInterface $storage, $type = false)
     {
         $this->storage = $storage;
         $this->initializeType($type, false);
-
     }
+
+    public static function getInstance(StorageInterface $storage, $type = false)
+    {
+        static $instance = null;
+        if (null !== $instance) {
+            if ($instance->type === $type) {
+                return $instance;
+            }
+        }
+        $instance = new static($storage, $type);
+        return $instance;
+    }
+
 
     /**
      * @return array All cart items
@@ -155,5 +169,24 @@ class Cart
 
     }
 
+    /**
+     * Private clone method to prevent cloning of the instance of the
+     * *Singleton* instance.
+     *
+     * @return void
+     */
+    private function __clone()
+    {
+    }
+
+    /**
+     * Private unserialize method to prevent unserializing of the *Singleton*
+     * instance.
+     *
+     * @return void
+     */
+    private function __wakeup()
+    {
+    }
 
 } 
